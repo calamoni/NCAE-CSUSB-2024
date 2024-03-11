@@ -2,6 +2,10 @@
 #
 # Script for configuring router if it is a centOS
 #
+# sudo systemctl restart NetworkManager
+#
+# sudo nmcli connection reload
+#
 # Take user input
 #
 echo "THIS SHOULD ONLY BE USED ON CENTOS"
@@ -68,6 +72,23 @@ if [ "$interface" = 'eth0' ]; then
        			echo "GATEWAY=$gateway_address" >> "$config_file"
 
 			fi
+	echo "Please enter a DNS server, if not applicable just press enter."
+
+	echo -n "DNS: "
+
+	read dns_address
+
+		if [ -n "$dns_address" ]; then
+
+     			if grep -q "^DNS=" "$config_file"; then
+
+ 			sed -i "s/DNS=.*/DNS=$dns_address/" "$config_file"
+
+    			else
+
+       			echo "DNS=$dns_address" >> "$config_file"
+
+			fi
 		fi
 
 elif [ "$interface" == 'eth1' ]; then
@@ -124,6 +145,23 @@ elif [ "$interface" == 'eth1' ]; then
     			else
 
        			echo "GATEWAY=$gateway_address" >> "$config_file"
+
+			fi
+  	echo "Please enter a DNS server, if not applicable just press enter."
+
+	echo -n "DNS: "
+
+	read dns_address
+
+		if [ -n "$dns_address" ]; then
+
+     			if grep -q "^DNS=" "$config_file"; then
+
+ 			sed -i "s/DNS=.*/DNS=$dns_address/" "$config_file"
+
+    			else
+
+       			echo "DNS=$dns_address" >> "$config_file"
 
 			fi
 		fi
