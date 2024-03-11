@@ -15,4 +15,6 @@ cat /etc/passwd | grep -e /bin/bash -e /bin/zsh -e /bin/sh | cut -d ':' -f 1
 echo -e "\033[1mAll network services that are listening and running\033[0m"
 
 netstat -lp
+
+netstat -lp > ~/netstat.txt
 #
