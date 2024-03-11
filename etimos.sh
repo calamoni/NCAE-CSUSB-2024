@@ -8,7 +8,7 @@ echo "THIS SHOULD ONLY BE USED ON CENTOS"
 
 echo "Please enter the interface, ex. eth0 or eth1. You can check what interfaces are available using "ip a"" 
 
-echo -n "Interface:"
+echo -n "Interface: "
 
 read interface
 
@@ -59,8 +59,15 @@ if [ "$interface" = 'eth0' ]; then
 
 		if [ -n "$gateway_address" ]; then
 
-		echo "GATEWAY=$gateway_address" >> "$config_file"
+     			if grep -q "^GATEWAY=" "$config_file"; then
 
+ 			sed -i "s/GATEWAY=.*/GATEWAY=$gateway_address/" "$config_file"
+
+    			else
+
+       			echo "GATEWAY=$gateway_address" >> "$config_file"
+
+			fi
 		fi
 
 elif [ "$interface" == 'eth1' ]; then
@@ -110,10 +117,16 @@ elif [ "$interface" == 'eth1' ]; then
 
 		if [ -n "$gateway_address" ]; then
 
-		echo "GATEWAY=$gateway_address" >> "$config_file"
+     			if grep -q "^GATEWAY=" "$config_file"; then
 
+ 			sed -i "s/GATEWAY=.*/GATEWAY=$gateway_address/" "$config_file"
+
+    			else
+
+       			echo "GATEWAY=$gateway_address" >> "$config_file"
+
+			fi
 		fi
-
 else
 	echo "Invalid interface."
 	exit 1
