@@ -43,7 +43,7 @@ if [ "$interface" = 'eth0' ]; then
 
 		else
 
-			echo "IPADDR=$netmask" >> "$config_file"
+			echo "NETMASK=$netmask" >> "$config_file"
 
 		fi
 
@@ -90,7 +90,7 @@ elif [ "$interface" == 'eth1' ]; then
 
 		else
 
-			echo "IPADDR=$netmask" >> "$config_file"
+			echo "NETMASK=$netmask" >> "$config_file"
 
 		fi
 
