@@ -15,9 +15,9 @@ read interface
 if [ "$interface" = 'eth0' ]; then
 	config_file="/etc/sysconfig/network-scripts/ifcfg-eth0"
 
-	sed -i "s/BOOTPROTO=.*/BOOTPROTO='static' "$config_file"
+	sed -i "s/BOOTPROTO=.*/BOOTPROTO="static"/" "$config_file"
 
-  	sed -i "s/ONBOOT=.*/ONBOOT='yes' "$config_file"
+  	sed -i "s/ONBOOT=.*/ONBOOT="yes"/" "$config_file"
 
 	echo "Please enter the IP Address"
 
@@ -66,9 +66,9 @@ if [ "$interface" = 'eth0' ]; then
 elif [ "$interface" == 'eth1' ]; then
 	config_file="/etc/sysconfig/network-scripts/ifcfg-eth1"
 
-	sed -i "s/BOOTPROTO=.*/BOOTPROTO='static' "$config_file"
+	sed -i "s/BOOTPROTO=.*/BOOTPROTO="static"/" "$config_file"
 
-  	sed -i "s/ONBOOT=.*/ONBOOT='yes' "$config_file"
+  	sed -i "s/ONBOOT=.*/ONBOOT="yes"/" "$config_file"
 
 	echo "Please enter the IP Address"
 
