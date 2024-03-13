@@ -76,5 +76,22 @@ while true; do
 		sleep 5 
 
 	done 
+ 
+elif [ $log = '4' ]; then
+        collect_user_info() {
+                echo "=============== User process information =============="
+                echo "Date: $(date)"
+                echo "-------------------------------------------------------"
+                ps -eo pid,uid,args | awk '$2 >= 1000' 
+                echo "-------------------------------------------------------"
+                uptime 
+                echo "-------------------------------------------------------"
+                echo
+        }
+        while true; do
+                { collect_user_info; }
+                sleep 45
+        done 
+
 fi
 
