@@ -10,8 +10,8 @@ Script that will enumerate all available users, all avilable users with a shell 
 [[Prosehe]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/prosehe.sh_) <br> </br> 
 Script that will automate, show processes and continously update after a time interval. 
 
-[[Pame]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Pame.txt) <be> </br>
+[[Pame]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Pame.txt) <br> </br>
 script that will auto-configure firewall rules
 
-[[Laiye]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Laiye) <be> </br>
+[[Laiye]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Laiye) <br> </br>
 adds all important config files in a directory 
