@@ -4,7 +4,7 @@
 
 echo "THIS WILL BE USED FOR ANY DEVICE THAT NEEDS FIREWALL CONFIGURATIONS"
 
-echo "Enter a port that you want to open, IF you are finished with opening your ports press 1 to close the script"
+echo "Enter a port that you want to open"
 
 prompt_ports() {
         read -p "Enter Port(s) to open (comma-seperated list): " ports_input
