@@ -23,5 +23,26 @@ cp -r /etc/sysconfig/network-scripts /dev/vfio1
 cp -r /etc/sysconfig/network /dev/vfio1
 cp -r /etc/firewalld/zones  /dev/vfio1
 
+#this is for transferring the directory to the backup server
+select_directory() {
+    echo "Select Directory: "
+    select dir in */; do 
+        if [ -n "$dir"]; then 
+            echo "you chose: $dir"
+        break
+        else
+            echo "Invalid selection, try again" 
+        fi 
+done 
+} 
+
+perform_scp() { 
+    read -p "enter username@hostname: " remote_host 
+    read -p "enter destination directory: " destination
+
+    scp -r "$dir" "remote_host":"destination"
+    echo "files copied successfully" 
+}
+
 
 
