@@ -11,4 +11,7 @@ Script that will enumerate all available users, all avilable users with a shell 
 Script that will automate, show processes and continously update after a time interval. 
 
 [[Pame]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Pame.txt) <be> </br>
-script that will auto configure firewall rules
+script that will auto-configure firewall rules
+
+[[Laie]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Laiye) <be> </br>
+adds all important config files in a directory 
