@@ -13,5 +13,5 @@ Script that will automate, show processes and continously update after a time in
 [[Pame]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Pame.txt) <be> </br>
 script that will auto-configure firewall rules
 
-[[Laie]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Laiye) <be> </br>
+[[Laiye]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Laiye) <be> </br>
 adds all important config files in a directory 
