@@ -15,3 +15,6 @@ script that will auto-configure firewall rules
 
 [[Laiye]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Laiye) <br> </br>
 adds all important config files in a directory 
+
+[[gabagoo]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/gabagoo.sh) <br> </br>
+Automation script for DNS configuration in regards to BIND. 
