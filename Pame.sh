@@ -6,27 +6,24 @@ echo "THIS WILL BE USED FOR ANY DEVICE THAT NEEDS FIREWALL CONFIGURATIONS"
 
 echo "Enter a port that you want to open, IF you are finished with opening your ports press 1 to close the script"
 
-echo -n "Port number to Open: "
+prompt_ports() {
+        read -p "Enter Port(s) to open (comma-seperated list): " ports_input
+        IFS=',' read -ra ports <<< "$ports_input"
 
-read Port
+open_ports() {
+        for port in "${ports[@]}"; do
+                if [[ ! $port = ~ ^[0-9]+$ ]]; then
+                        echo "wrong port number: $port'
+                        continue
+                fi 
 
-if ["$Port" = '80']; then
-        iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-fi
+                sudo iptables -I INPUT -p tcp --dport "$port" -j ACCEPT
+                echo "port $port is opened"
 
-if ["$Port" = '53']; then
-        iptables -A INPUT -p tcp --dport 53 -j ACCEPT
-        iptables -A INPUT -p udp --dport 53 -j ACCEPT
-fi
+                sudo iptables-save >/etc/iptables/rules.v4
+                sudo iptables-save >/etc/iptables/rules.v6
+}
 
-if ["$Port" = '3306']; then
-        iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
-fi
-if ["$Port" = '21']; then
-        iptables -A INPUT -p tcp --dport 20 -j ACCEPT
-        iptables -A INPUT -p tcp --dport 21 -j ACCEPT
-fi
-
-        
-# this is only for CentOS
-iptables-save > /etc/sysconfig/iptables
+prompt_ports
+open_ports
+                
