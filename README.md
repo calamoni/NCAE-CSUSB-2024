@@ -10,5 +10,5 @@ Script that will enumerate all available users, all avilable users with a shell 
 [[Prosehe]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/prosehe.sh_) <br> </br> 
 Script that will automate, show processes and continously update after a time interval. 
 
-[[Pame]] <be> </br>
+[[Pame]] (https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/Pame.txt) <be> </br>
 script that will auto configure firewall rules
