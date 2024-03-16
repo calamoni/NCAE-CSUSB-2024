@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# shout out chatGPT once again!!! if urmad about that, please leave it in the suggestion box and I'll get to it later(no I won't). 
+
+
 # Source directory
 
 if [ "$EUID" -ne 0 ]; then
