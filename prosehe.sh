@@ -18,7 +18,6 @@ collect_tcp_udp_info() {
         echo "=============== Network Information ==============="
         echo "Date: $(date)"
         echo "---------------------------------------------------"
-        ifconfig -a 
         echo "---------------- ALL TCP PORTS --------------------"
         ss -t 
         echo "---------------- ALL UDP PORTS---------------------"
