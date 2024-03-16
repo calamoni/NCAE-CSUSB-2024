@@ -1,4 +1,4 @@
-# Scripts and resources
+# Scripts | Resources
 
 ---
 [Etimos](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/etimos.sh) <br> </br>
@@ -27,3 +27,4 @@ This is a script to automate the backup of ftp files.
 
 [myexleft](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/myexleft.sh) <br> </br>
 This is a script for external DNS. 
+
