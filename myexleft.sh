@@ -106,7 +106,7 @@ echo "	type master;"
 echo "	file "/etc/bind/team"$team_number".ncaecybergames.org.zone";" 
 echo "};"
 echo
-echo " '<0.255.255.255>.in-addr-.arpa' {"
+echo " '<0.0.255.255>.in-addr-.arpa' {"
 echo "	type master;"
 echo "	file "/etc/bind/team"$team_number".ncaecybergames.org.rev";"
 echo "};"
