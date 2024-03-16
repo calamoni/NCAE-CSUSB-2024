@@ -2,6 +2,8 @@
 #
 # Search for all users available on the system and output to a file
 #
+while true; do
+
 echo -e "\033[1mAll available users\033[0m"
 #
 cat /etc/passwd | cut -d ':' -f 1 
@@ -17,4 +19,8 @@ echo -e "\033[1mAll network services that are listening and running\033[0m"
 netstat -lp
 
 netstat -lp > ~/netstat.txt
+
+sleep 5
+done
+
 #
