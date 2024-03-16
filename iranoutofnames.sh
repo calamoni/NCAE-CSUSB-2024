@@ -8,6 +8,7 @@
 if [ "$EUID" -ne 0 ]; then
         echo 'script requires root privileges'
         exit 1
+fi
 
 allowed_usernames=(
     "khanmigo"
