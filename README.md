@@ -24,3 +24,6 @@ This is a script to automate the default users.
 
 [[ineedfiles]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/iranoutofnames.sh) <br> </br> 
 This is a script to automate the backup of ftp files. 
+
+[[myexleft]](https://github.com/skitpack/NCAE-CSUSB-2024/blob/main/myexleft.sh) <br> </br>
+This is a script for external DNS. 
